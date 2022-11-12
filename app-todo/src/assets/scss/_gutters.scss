@@ -1,0 +1,81 @@
+$gutter-container: (
+  xs: 28,
+  sm: 32,
+  md: 44,
+  lg: 56,
+  xl: 64,
+  xxl: 88,
+);
+
+$gutter-sizes: (
+  16: 16,
+  24: 24,
+  32: 32,
+  48: 48,
+  64: 64,
+  96: 96,
+  136: 136,
+);
+
+$offset-container: (
+  1:1,
+  2:2,
+  3:3,
+  4:4,
+  5:5,
+  6:6,
+  7:7,
+  8:8,
+  9:9,
+  10:10,
+  11:11,
+  12:12
+);
+
+@mixin gutter-top($size) {
+  padding-top: rem($size);
+}
+
+@mixin gutter-bottom($size) {
+  padding-bottom: rem($size);
+}
+
+@mixin gutter-y($size) {
+  @include gutter-top($size);
+
+  @include gutter-bottom($size);
+}
+
+@each $size, $value in $gutter-sizes {
+
+  .gutter-top-#{$size} {
+    @include gutter-top($value);
+  }
+
+  .gutter-bottom-#{$size} {
+    @include gutter-bottom($value);
+  }
+
+  .gutter-y-#{$size} {
+    @include gutter-y($value);
+  }
+}
+
+@each $size, $value in $gutter-sizes {
+
+  @media screen and (min-width: map-get($breakpoints, sm)) {
+
+    .gutter-top-sm-#{$size} {
+      @include gutter-top($value);
+    }
+
+    .gutter-bottom-sm-#{$size} {
+      @include gutter-bottom($value);
+    }
+
+    .gutter-y-sm-#{$size} {
+      @include gutter-y($value);
+    }
+  }
+}
+

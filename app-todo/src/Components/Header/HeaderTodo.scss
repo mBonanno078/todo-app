@@ -1,0 +1,21 @@
+@import '../../assets/scss/includes.scss';
+
+.header-todo-app {
+    padding: rem(40) 0;
+
+    .title-todo-app {
+        font-family: 'Poppins';
+        @include font-size-line-weight(32, 40, 500);
+        text-align: center;
+        
+        @media screen and (min-width: map-get($breakpoints, sm)) {
+            @include font-size-line-weight(38, 48);
+        }
+    
+        @media screen and (min-width: map-get($breakpoints, lg)) {
+            @include font-size-line-weight(48, 64);
+        }
+    }
+    
+
+}

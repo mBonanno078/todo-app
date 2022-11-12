@@ -1,12 +1,14 @@
-import React from 'react';
 import './AppTodo.scss';
+import HeaderTodo from '../Header/HeaderTodo';
+import FormTodo from '../FormTodo/FormTodo';
 
-function App() {
+const AppTodo = () => {
   return (
-    <div className="container-app-todo">
-      <h1>App todo</h1>
+    <div className="container-todo-app">
+      <HeaderTodo/>
+      <FormTodo/>
     </div>
   );
 }
 
-export default App;
+export default AppTodo;

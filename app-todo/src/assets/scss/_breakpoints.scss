@@ -1,0 +1,15 @@
+$breakpoints: (
+  xs: 0,
+  sm: rem(768),
+  md: rem(1024),
+  lg: rem(1280),
+  xl: rem(1440),
+  xxl: rem(1920)
+);
+
+$col-gutter: (
+  xs: rem(8),
+  sm: rem(16),
+  md: rem(24),
+  lg: rem(32),
+);
