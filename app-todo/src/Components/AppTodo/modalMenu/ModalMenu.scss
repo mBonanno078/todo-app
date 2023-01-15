@@ -1,0 +1,75 @@
+@import '../../../assets/scss/includes.scss';
+
+.container-modal-menu {
+    background-color: $background-todo;
+    height: 100vh;
+    width: 100%;
+    min-width: rem(200);
+    max-width: rem(320);
+    position: absolute;
+    right: 100%;
+    top: 0;
+    padding-top: rem(82);
+    box-shadow: 20px -1rem 2.1875rem rgb(4 9 20 / 3%), 20px 1rem 1.40625rem rgb(4 9 20 / 3%), 0px -1rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+    transition: all 0.3s ease-in;
+
+    @media screen and (min-width: map-get($breakpoints, md)) {
+        position: static;
+        box-shadow: 40px 180px 80px rgba(28, 29, 34, 0.06);
+        border-right: rem(1) solid  rgba(28, 29, 34, 0.08);
+    }
+
+    &.open {
+        transform: translateX(100%);
+        
+        @media screen and (min-width: map-get($breakpoints, md)) {
+           transform: inherit;
+        }
+    }
+    
+    .content-list-type-task {
+        padding-top: rem(20);
+        list-style: none;
+
+        .title-type-task {
+            color: $text-color;
+            font-family: "Poppins";
+            @include font-size-line-weight(18, 20, 700);
+            text-transform: uppercase;
+            margin-bottom: rem(8);
+            
+            @media screen and (min-width: map-get($breakpoints, sm)) {
+                @include font-size-line-weight(20, 22);
+            }
+        }
+
+        .item-list {
+            padding: rem(20) 0;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: rem(2);
+                background: rgba(28, 29, 34, 0.08);
+                bottom: 0;
+            }
+
+            .list-status {
+                text-decoration: none;
+                color: $blue-dark;
+                padding: rem(8) 0;
+                transition: all 0.3s ease-in;
+                @include font-size-line-weight(16, 16);
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color:$color-link-hover;
+                }
+            }
+        }
+
+    }
+}

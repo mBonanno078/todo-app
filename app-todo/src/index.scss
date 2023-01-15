@@ -11,9 +11,20 @@ html {
     font-family: 'Roboto';
     @include font-size-line-weight(16, 16);
     color: $blue-dark;
-    background-image: linear-gradient(120deg, map-get($yellow, 900), map-get($yellow, 800));
 }
 
 .container-todo-app {
     @include todo-app-container();
+}
+
+.button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    &:focus,
+    &:hover {
+        outline: none;
+        border: none;
+    }
 }

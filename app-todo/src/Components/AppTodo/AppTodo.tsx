@@ -1,12 +1,10 @@
 import './AppTodo.scss';
-import HeaderTodo from '../Header/HeaderTodo';
-import FormTodo from '../FormTodo/FormTodo';
+import HeaderApp from './HeaderApp/HeaderApp';
 
 const AppTodo = () => {
   return (
-    <div className="container-todo-app">
-      <HeaderTodo/>
-      <FormTodo/>
+    <div className="container-todo">
+      <HeaderApp/>
     </div>
   );
 }

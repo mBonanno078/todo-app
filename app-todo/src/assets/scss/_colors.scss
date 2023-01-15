@@ -91,6 +91,12 @@ $blue-dark: #07294a;
 
 $modal: #2c4965;
 
+$color-logo: #2b5876;
+
+$background-todo: #fafbfc;
+
+$text-color: #3f6ad8;
+
 .primary-900 {
   color: map-get($blue, 900);
 }
@@ -105,6 +111,6 @@ $modal: #2c4965;
 
 $gradient: (
   default: linear-gradient(to left, map-get($green, 600), map-get($blue, 500) 30%, map-get($blue, 900))
-)
+);
 
-
+$color-link-hover: #3f6ad8;
